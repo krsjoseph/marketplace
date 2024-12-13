@@ -1,10 +1,11 @@
-export type OfferTagType = 'Operator' | 'Fast' | 'Node Runner' | 'Fastest' | string;
+export type OfferTagType = 'Operator' | 'Fast' | 'Node Runner' | 'Fastest' | 'Builder' | string;
 
 export interface Tag {
   name: OfferTagType;
   __typename?: string;
 }
 
+// Order related types
 export interface OfferOrders {
   locked_size: string;
   count?: number;
@@ -19,6 +20,7 @@ export interface OfferConditions {
   __typename?: string;
 }
 
+// Liquidity and channel information
 export interface AvailableLiquidity {
   amount: number;
   total: number;
@@ -29,6 +31,7 @@ export interface ChannelInfo {
   btcCap: number;
 }
 
+// Main offer type
 export interface Offer {
   id: string;
   account: string;
@@ -51,7 +54,7 @@ export interface Offer {
   tags: Tag[];
   total_size: string;
   __typename?: string;
-  //Optional??
+  // Optional fields
   name?: string;
   icon?: string;
   score?: number;
@@ -66,8 +69,29 @@ export interface Offer {
   channelInfo?: ChannelInfo;
 }
 
+// Response types
 export interface OffersResponse {
-  getOffers: {
-    list: Offer[];
+  data?: {
+    getOffers: {
+      list: Offer[];
+    };
+  };
+  errors?: Array<{
+    message: string;
+    locations?: Array<{
+      line: number;
+      column: number;
+    }>;
+    path?: string[];
+  }>;
+  extensions?: {
+    cost: {
+      requestedQueryCost: number;
+      throttleStatus: {
+        maximumAvailable: number;
+        currentlyAvailable: number;
+        restoreRate: number;
+      };
+    };
   };
 }

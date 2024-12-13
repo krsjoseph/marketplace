@@ -60,7 +60,7 @@ export function Marketplace() {
   const [search, setSearch] = useState('');
   const { loading, error, data, refetch } = useQuery<OffersResponse>(GET_OFFERS);
 
-  const offers = data?.getOffers?.list ?? [];
+  const offers = data?.data?.getOffers?.list ?? [];
 
   if (loading) {
     return <FullPageLoader />;
