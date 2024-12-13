@@ -1,7 +1,9 @@
 import React from 'react';
 import AmbossLogo from '../img/logo';
-import UserImg from '../img/user.png';
 import DashboardButton from './DashboardButton';
+
+// import userAvatarImage from '../img/user.png';
+
 
 
 const UserAvatar: React.FC = ({
@@ -9,7 +11,7 @@ const UserAvatar: React.FC = ({
   return (
     <div className="h-8 w-8 rounded-full overflow-hidden">
       <img
-        src=''
+        // src={userAvatarImage}
         alt="User avatar"
         className="h-full w-full object-cover"
       />

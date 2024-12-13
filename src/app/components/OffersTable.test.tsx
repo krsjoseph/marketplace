@@ -119,7 +119,6 @@ describe('OffersTable', () => {
   it('displays channel information correctly', () => {
     render(<OffersTable offers={[mockOffer]} />);
     
-    const ordersCount = Math.floor(Math.random() * 150) + 1;
     const formattedCapacity = formatBTC(mockOffer.total_size);
     
     expect(screen.getByText(`${formattedCapacity} BTC capacity`)).toBeInTheDocument();

@@ -71,10 +71,8 @@ export interface Offer {
 
 // Response types
 export interface OffersResponse {
-  data?: {
-    getOffers: {
-      list: Offer[];
-    };
+  getOffers: {
+    list: Offer[];
   };
   errors?: Array<{
     message: string;

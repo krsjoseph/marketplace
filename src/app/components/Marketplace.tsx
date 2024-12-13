@@ -30,22 +30,23 @@ const backgroundOption1 = `
   rgb(10, 10, 10)
 `;
 
-const backgroundOption2 = `
-  radial-gradient(
-    circle at 50% 0%, 
-    rgba(121, 40, 202, 0.12) 0%,
-    rgba(121, 40, 202, 0.06) 25%,
-    rgba(255, 0, 128, 0.02) 50%,
-    rgba(10, 10, 10, 1) 70%
-  ),
-  repeating-radial-gradient(
-    circle at 50% 0%,
-    transparent 0,
-    rgba(121, 40, 202, 0.03) 2px,
-    transparent 4px
-  ),
-  rgb(10, 10, 10)
-`;
+// different option for background will explain difference during call
+// const backgroundOption2 = `
+//   radial-gradient(
+//     circle at 50% 0%, 
+//     rgba(121, 40, 202, 0.12) 0%,
+//     rgba(121, 40, 202, 0.06) 25%,
+//     rgba(255, 0, 128, 0.02) 50%,
+//     rgba(10, 10, 10, 1) 70%
+//   ),
+//   repeating-radial-gradient(
+//     circle at 50% 0%,
+//     transparent 0,
+//     rgba(121, 40, 202, 0.03) 2px,
+//     transparent 4px
+//   ),
+//   rgb(10, 10, 10)
+// `;
 
 const FullPageLoader = () => (
   <div className="fixed inset-0 flex items-center justify-center bg-[#0a0a0a] bg-opacity-90 z-50">
@@ -60,7 +61,7 @@ export function Marketplace() {
   const [search, setSearch] = useState('');
   const { loading, error, data, refetch } = useQuery<OffersResponse>(GET_OFFERS);
 
-  const offers = data?.data?.getOffers?.list ?? [];
+  const offers = data?.getOffers?.list ?? [];
 
   if (loading) {
     return <FullPageLoader />;
