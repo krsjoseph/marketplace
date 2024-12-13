@@ -1,25 +1,22 @@
 import React from 'react';
 import AmbossLogo from '../img/logo';
 import DashboardButton from './DashboardButton';
+import Image from 'next/image';
 
-// import userAvatarImage from '../img/user.png';
-
-
+import userAvatarImage from '../img/user.png';
 
 const UserAvatar: React.FC = ({
 }) => {
   return (
     <div className="h-8 w-8 rounded-full overflow-hidden">
-      <img
-        // src={userAvatarImage}
+      <Image
+        src={userAvatarImage}
         alt="User avatar"
-        className="h-full w-full object-cover"
+        className="object-cover"
       />
     </div>
   );
 };
-
-
 
 interface HeaderProps {
   search: string;
