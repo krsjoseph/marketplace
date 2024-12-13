@@ -80,7 +80,7 @@ export function Marketplace() {
       <Header search={search} onSearchChange={setSearch} />
 
       <main className="m-5">
-        <div className="px-8 mx-10">
+        <div className="px-1 mx-6">
           <div className="flex items-center justify-between mt-8 mb-6">
             <h1 className="text-2xl font-semibold flex items-center gap-2">
               Explore Offers
@@ -91,7 +91,6 @@ export function Marketplace() {
               <ChannelButton variant="buy" />
             </div>
           </div>
-
           <div className="mt-8">
             {error ? (
               <div className="text-red-500 text-center">Error loading offers</div>
