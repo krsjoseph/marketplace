@@ -7,4 +7,3 @@ export const TAG_COLORS: Record<OfferTagType, { border: string; text: string }> 
   'Fastest': { border: '#E879F9', text: '#E879F9' },
   'default': { border: 'rgba(255, 255, 255, 0.2)', text: 'rgba(255, 255, 255, 0.8)' }
 };
-

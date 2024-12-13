@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Amboss",
+  title: "Amboss Space - Lightning Network Explorer and Analytics Tools",
   description: "Marketplace",
 };
 
